@@ -1,0 +1,19 @@
+---
+layout: category
+title: Разбор ошибок
+permalink: /tw/bullshit
+---
+
+
+<h1>Разбор ошибок</h1>
+<p> Ищем косяки в документации к гос. проектам.</p>
+<hr/>
+
+{% for post in site.categories.bullshit %}
+    <div class="posts">
+    <span class="post-meta small">{{ post.date | date: site.date_format }}</span><br>
+    <a href="{{ post.url | relative_url }}" class="post-link"><h2 class="h1 post-title">{{ post.title }}</h2></a> 
+    {{ post.content}}
+    <hr/>
+    </div>
+  {% endfor %}

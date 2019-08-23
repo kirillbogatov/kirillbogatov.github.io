@@ -1,0 +1,64 @@
+.intro-tw{
+  background-color: $tw-bg-color;
+  padding-bottom: 1.2rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+.intro-fz{
+  background-color: $fz-bg-color;
+  padding-bottom: 1.2rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  border: 1px solid #ffdb01;
+}
+
+.warning{
+  background-color: $fz-bg-color;
+  padding-bottom: 1.2rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  border: 1px solid #ffdb01;
+  width: 100%;
+}
+
+.note {
+    margin: 2rem auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-width: 90%;
+    border-top: 1px solid rgba(204, 204, 204, 0.3);
+    border-bottom: 1px solid rgba(204, 204, 204, 0.3);
+    text-align: center;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+@media only screen and (min-width: 1200px) {
+.note {
+	margin: auto;
+    border: 0;
+    text-align: left;
+    float: right;
+    margin-right: -190px;
+    padding-top: 4px;
+    padding-left: 1.5rem;
+    max-width: 200px;
+    font-size: 0.85rem;
+  }
+}
+
+@media only screen and (min-width: 1290px) {
+.note {
+	margin: auto;
+    border: 0;
+    text-align: left;
+    float: right;
+    margin-right: -250px;
+    padding-top: 4px;
+    padding-left: 1.5rem;
+    max-width: 200px;
+    font-size: 0.85rem;
+  }
+}

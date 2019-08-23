@@ -1,0 +1,19 @@
+---
+layout: category
+title: Слова
+permalink: /tw/words
+---
+
+
+<h1>Слова</h1>
+<p>Об употреблении слов в интерфейсе, документации и повседневной жизни.</p>
+<hr/>
+
+{% for post in site.categories.words %}
+    <div class="posts">
+    <span class="post-meta small">{{ post.date | date: site.date_format }}</span><br>
+    <a href="{{ post.url | relative_url }}" class="post-link"><h2 class="h1 post-title">{{ post.title }}</h2></a> 
+    {{ post.content}}
+    <hr/>
+    </div>
+  {% endfor %}

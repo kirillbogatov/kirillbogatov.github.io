@@ -1,0 +1,102 @@
+# Site settings
+title:       Кирилл Богатов
+email:       bogatov.ks@gmail.com
+author:      Кирилл Богатов
+description: "Ещё один блог о жизненном опыте и документировании"
+baseurl:     "/"
+url:         ""
+date_format: "%-d.%-m.%Y"
+ 
+# Google services
+google_verification:
+# Use either direct GA implementation or set up GTM account
+# - using both will skew your data (leave blank to not use at all)
+google_analytics:
+google_tag_manager:
+# Bing services
+bing_verification:
+
+# Optional features
+animated:             false
+show_related_posts:   true
+show_post_footers:    false
+show_social_icons:    true
+enable_mathjax: false
+extended_fonts: false
+enable_anchorjs: false
+# Preview image for social media aka og:image and twitter:image
+post_preview_image: false
+
+# Facebook Page integration
+# (for instant articles and other stuff)
+fb_page: true
+fb_page_id:
+
+# Disqus post comments
+# (leave blank to disable Disqus)
+disqus_shortname: 
+
+# Facebook Comments plugin
+# (leave blank to disable Facebook Comments, otherwise set it to true)
+facebook_comments: true
+facebook_appid:
+facebook_comments_number: 10
+
+# Social icons
+github_username:
+reddit_username:
+bitbucket_username:
+stackoverflow_id:
+twitter_username:
+skype_username: 
+steam_nickname:
+google_plus_id:
+linkedin_username:
+angellist_username:
+medium_id:
+bitcoin_url:
+paypal_url:
+flattr_button:
+telegram_username:
+vk_id: rainvention
+facebook_id: bogatov.ks
+
+# Post sharing icons
+show_sharing_icons: true
+# Change to 'true' to enable individual icons
+share_facebook: true
+share_twitter: true
+share_linkedin: false
+share_reddit: false
+
+
+text:
+  pagination:
+    newer: '←'
+    older: '→'
+  post:
+    updated:        'Обновлено'
+    minute_read:    'minute read'
+    related_posts:  'Похожие записи'
+  index:
+    coming_soon: 'Здесь пусто.'
+  og_locale: 'en_US'
+
+# Build settings
+markdown:     kramdown
+redcarpet:
+  extensions: ['smart', 'tables', 'with_toc_data']
+permalink:    pretty
+paginate:     4
+sass:
+  style: compressed
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+# https://github.com/jekyll/jekyll/issues/2938
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
+  - README.md
+  - vendor

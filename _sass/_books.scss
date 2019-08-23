@@ -1,0 +1,44 @@
+/* Books */
+.book {
+  display:flex;
+  margin-top:2rem
+}
+
+.book .book_about {
+  padding-left:2rem
+}
+
+.book .book_about h4 {
+  margin: 0 0 2rem;
+  font-style: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5
+}
+
+.book .book_cover_container {
+  width:150px;
+  flex:0 0 150px;
+}
+
+.book .book_cover_container .book_cover {
+  width:100%;
+  height:auto
+}
+
+.book .book_name {
+  font-weight:bold;
+  line-height:1.25
+}
+
+.book .book_author {
+  display: block;
+  line-height: 1.5;
+  color: rgba(48, 49, 51, .6);
+}
+
+.book .book_description {
+  display: block;
+  line-height: 1.5;
+  margin-top:1rem
+}

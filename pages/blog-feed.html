@@ -1,0 +1,14 @@
+---
+layout: default
+title: Блог Кирилла
+permalink: /blog/feed/
+---
+<br>
+{% for post in site.posts %}
+<div class="posts">
+	<span class="post-meta small">{{ post.date | date: site.date_format }}</span><br>
+    <a href="{{ post.url | relative_url }}" class="post-link"><h2 class="h1 post-title">{{ post.title }}</h2></a> 
+    {{post.content}}
+    <br><br>
+</div>
+{% endfor %}

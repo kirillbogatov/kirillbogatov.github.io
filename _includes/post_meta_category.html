@@ -1,0 +1,21 @@
+{% if post %}
+  {% assign categories = post.categories %}
+{% else %}
+  {% assign categories = page.categories %}
+{% endif %}
+
+{% for category in categories %}
+
+  {% if category == "tw" %}
+   · <a href="/tw">Справочник технического писателя</a>
+  {% endif %}
+
+{% endfor %}
+
+{% for category in categories %}
+
+  {% if category == "finance-zen" %}
+   · <a href="/blog/finance-zen/">Простые финансы</a>
+  {% endif %}
+
+{% endfor %}
