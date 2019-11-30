@@ -3,7 +3,10 @@ layout: default
 title: Блог Кирилла
 permalink: /blog/feed/
 ---
+<small>Как показывать: <a href="/blog/"> группами</a> / <b>лентой</b></small>
 <br>
+<br>
+
 {% for post in site.posts %}
 <div class="posts">
 	<span class="post-meta small">{{ post.date | date: site.date_format }}</span><br>
