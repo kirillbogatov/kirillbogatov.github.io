@@ -52,4 +52,7 @@ layout: default
   <div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-width="100%" data-numposts="{{ site.facebook_comments_number }}"></div>
 {% endif %}
 
+{% if site.comments %}
+  {% include comments.html %}
+{% endif %}
 <br>
