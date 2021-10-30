@@ -7,7 +7,7 @@ category: vui
 permalink: /vui/wumpus/
 ---
 
-![Охота на Вампуса](/images/posts/Wumpus-cover.jpg)
+![Охота на Вампуса](/images/posts/wumpus-cover.jpg)
 
 В 1972 году Грегори Йобом написал классическую текстовую игру Hunt the Wumpus. 
 
