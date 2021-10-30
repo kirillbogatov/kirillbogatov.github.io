@@ -4,7 +4,7 @@ title: Игра «Охота на Вампуса»
 summary: 
 date: 2021-10-30 00:00
 category: vui
-permalink: /wumpus/
+permalink: /vui/wumpus/
 ---
 
 В 1972 году Грегори Йобом написал классическую текстовую игру Hunt the Wumpus. 50 лет спустя я сделал её голосовой аналог для Алисы.
