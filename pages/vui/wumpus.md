@@ -35,7 +35,8 @@ permalink: /vui/wumpus/
 
 ## Что изменилось с переходом «в голос»
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kCnmcz-3IYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="772" height="315" src="https://www.youtube.com/embed/kCnmcz-3IYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+*<sub>Пример геймплея</sub>*
 
 При создании навыка для Алисы я ориентировался как на смартфоны, так и на умные колонки. На экране отображается информация о комнатах, но игру можно пройти и без экрана — все обстановка озвучивается приятным синтезированным голосом Эрмила. 
 
@@ -43,7 +44,7 @@ permalink: /vui/wumpus/
 
 ![Разные вступительные сообщения](/images/posts/wumpus-gameplay-1.jpg)
 ![Разные вступительные сообщения](/images/posts/wumpus-gameplay-2.jpg)<br>
-*<sub>Геймплей</sub>*
+*<sub>Главные команды: «иди» и «стреляй»</sub>*
 
 Умные стрелы пришлось выбросить, т.к. их путь крайне тяжело просчитать, не видя перед собой карты. Но зато теперь стрелами можно прощупывать ямы и летучих мышей.
 
