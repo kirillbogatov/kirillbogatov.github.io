@@ -35,7 +35,7 @@ permalink: /vui/wumpus/
 
 ## Что изменилось с переходом «в голос»
 
-<iframe width="772" height="420" src="https://www.youtube.com/embed/kCnmcz-3IYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="772" height="450" src="https://www.youtube.com/embed/kCnmcz-3IYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 *<sub>Пример геймплея</sub>*
 
