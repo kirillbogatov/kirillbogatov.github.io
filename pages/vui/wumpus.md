@@ -15,9 +15,6 @@ permalink: /vui/wumpus/
 
 ### О чем был оригинал
 
-![Вампус, такой Вампус](/images/posts/wampus-poster.jpg)
-*Обложка оригинальной игры 1972 года*
-
 <div class="note">
 
 <img src="/images/posts/wampus-poster.jpg">	
