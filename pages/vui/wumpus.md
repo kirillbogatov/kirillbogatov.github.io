@@ -19,8 +19,8 @@ permalink: /vui/wumpus/
 *Обложка оригинальной игры 1972 года*
 
 <div class="note">
-	
-![Вампус, такой Вампус](/images/posts/wampus-poster.jpg)
+
+<img src="/images/posts/wampus-poster.jpg">	
 
 Сыграть в оригинального «Вампуса» можно здесь:<br><a href ="https://jayisgames.com/games/hunt-the-wumpus/" target="_blank">Hunt the Wumpus</a>.
 </div>
