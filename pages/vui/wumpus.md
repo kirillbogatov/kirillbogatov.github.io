@@ -35,7 +35,7 @@ permalink: /vui/wumpus/
 
 ## Что изменилось с переходом «в голос»
 
-<iframe width="772" height="315" src="https://www.youtube.com/embed/kCnmcz-3IYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+<iframe width="772" height="400" src="https://www.youtube.com/embed/kCnmcz-3IYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
 *<sub>Пример геймплея</sub>*
 
 При создании навыка для Алисы я ориентировался как на смартфоны, так и на умные колонки. На экране отображается информация о комнатах, но игру можно пройти и без экрана — все обстановка озвучивается приятным синтезированным голосом Эрмила. 
