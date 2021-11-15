@@ -143,3 +143,7 @@ permalink: /vui/wumpus/
 
 ## Известные проблемы
 По непонятным причинам игра изредка выдает сообщение «Диалог не отвечает». В&nbsp;этом случае просто скажите что-то вроде «Работай давай!» или «Запускайся!». Помогает в любом месте диалога.
+
+----
+
+<a href="https://dialogs.yandex.ru/store/skills/96f0d0b7-ohota-na-vampusa?utm_source=site&utm_medium=badge&utm_campaign=v1&utm_term=d1" target="_blank"><img alt="Алиса это умеет" src="https://dialogs.s3.yandex.net/badges/v1-term1.svg"/></a>
