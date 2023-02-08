@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.section {
+  width: 100%; 
+  margin: 50px 0;
+}
+.section:nth-child(2n) {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row; 
+  text-align: right;
+}
+.section:nth-child(2n+1) {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;  
+}
+figure {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #000000;
+  border-radius: 50%; 
+}
+.empty, .wrap, .figure {
+  width: 33.33%
+}
