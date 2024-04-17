@@ -1,0 +1,53 @@
+/* music */
+.music {
+  display:flex;
+  margin-top:2rem
+}
+
+.music .music_about {
+  padding-left:2rem
+}
+
+.music .music_about h4 {
+  margin: 0 0 2rem;
+  font-style: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5
+}
+
+.music .music_cover_container {
+  width:200px;
+  flex:0 0 200px;
+}
+
+.music .music_cover_container .music_cover {
+  width:100%;
+  height:auto
+}
+
+.music .music_name {
+  font-weight:bold;
+  line-height:1.25
+}
+
+.music .music_author {
+  display: block;
+  line-height: 1.5;
+  color: rgba(48, 49, 51, .6);
+}
+
+.music .music_genre {
+  margin: 0 0 2rem;
+  font-style: inherit;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  padding: 3px;
+  background: #E6E6FA; 
+}
+
+.music .music_description {
+  display: block;
+  line-height: 1.5;
+  margin-top:1rem
+}
