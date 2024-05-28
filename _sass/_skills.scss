@@ -1,14 +1,14 @@
-/* music */
-.music {
+/* skills */
+.skill {
   display:flex;
-  margin-top:2rem
+  margin-top:2rem;
 }
 
-.music .music_about {
+.skill .skill_about {
   padding-left:2rem
 }
 
-.music .music_about h4 {
+.skill .skill_about h4 {
   margin: 0 0 2rem;
   font-style: inherit;
   font-size: 1rem;
@@ -16,38 +16,33 @@
   line-height: 1.5
 }
 
-.music .music_cover_container {
-  width:200px;
-  flex:0 0 200px;
+.skill .skill_cover_container {
+  width:150px;
+  margin-top:0.25rem;
+  flex:0 0 150px;
 }
 
-.music .music_cover_container .music_cover {
+.skill .skill_cover_container .skill_cover {
   width:100%;
   height:auto
 }
 
-.music .music_name {
-  font-weight:bold;
-  line-height:1.25
+.skill .skill_name {
+  line-height:1.25;
+  font-size: 1.1rem;
 }
 
-.music .music_author {
+.skill .skill_description {
   display: block;
   line-height: 1.5;
+  margin-bottom:1rem; 
   color: rgba(48, 49, 51, .6);
 }
 
-.music .music_genre {
-  margin: 0 0 2rem;
-  font-style: inherit;
-  font-size: 0.75rem;
-  line-height: 1.5;
-  padding: 3px;
-  background: #E6E6FA; 
-}
-
-.music .music_description {
+.skill .skill_links {
   display: block;
   line-height: 1.5;
-  margin-top:1rem
+  margin-top:0.5rem;
+  margin-bottom:1rem;
+  font-size: 0.9rem;
 }
