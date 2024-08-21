@@ -1,48 +1,93 @@
-/* skills */
+/* Общие стили для контейнера категорий */
+.skill-category {
+  margin-bottom: 2rem;
+}
+
+.skill-category h3 {
+  margin: 0 0 0.5rem; /* Отступ снизу такой же, как между элементами в карточке */
+  font-size: 1.25rem;  /* Размер шрифта заголовка категории */
+  font-weight: bold;   /* Жирное начертание */
+  line-height: 1.4;    /* Высота строки для лучшего читаемости */
+  color: #333;         /* Цвет заголовка для контраста */
+  border-bottom: 1px solid #e1e1e1; /* Нижняя граница */
+  padding-bottom: 0.5rem; /* Отступ снизу от границы */
+}
+
+/* Стили для карточек навыков */
 .skill {
-  display:flex;
-  margin-top:2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1; /* Граница карточки */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень карточки */
+  width: 100%; /* Полная ширина контейнера */
 }
 
-.skill .skill_about {
-  padding-left:2rem
+.skill-item {
+  display: flex;
+  align-items: flex-start;
 }
 
-.skill .skill_about h4 {
-  margin: 0 0 2rem;
-  font-style: inherit;
+.skill_cover_container {
+  width: 124px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.skill_cover_container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.skill_about {
+  flex-grow: 1;
+  padding-left: 2rem;
+}
+
+.skill h4 {
+  margin: 0 0 1rem;
   font-size: 1rem;
   font-weight: bold;
-  line-height: 1.5
-}
-
-.skill .skill_cover_container {
-  width:150px;
-  margin-top:0.25rem;
-  flex:0 0 150px;
-}
-
-.skill .skill_cover_container .skill_cover {
-  width:100%;
-  height:auto
-}
-
-.skill .skill_name {
-  line-height:1.25;
-  font-size: 1.1rem;
-}
-
-.skill .skill_description {
-  display: block;
   line-height: 1.5;
-  margin-bottom:1rem; 
+}
+
+.skill_description {
+  margin-bottom: 1rem;
   color: rgba(48, 49, 51, .6);
 }
 
-.skill .skill_links {
-  display: block;
-  line-height: 1.5;
-  margin-top:0.5rem;
-  margin-bottom:1rem;
-  font-size: 0.9rem;
+
+.skill_links a {
+  display: inline-block;
+  color: #666; /* Менее насыщенный цвет текста */
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid #ccc; /* Светлая граница */
+  border-radius: 12px;
+  background-color: transparent; /* Прозрачный фон */
+  margin-right: 8px;
+  transition: color 0.2s ease, border-color 0.2s ease; /* Плавное изменение цвета текста и границы */
+}
+
+.skill_links a:hover {
+  color: #333; /* Легкое затемнение текста при наведении */
+  border-color: #bbb; /* Легкое затемнение границы при наведении */
+}
+
+
+@media (max-width: 768px) {
+  .skill-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skill_cover_container {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
