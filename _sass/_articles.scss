@@ -1,0 +1,26 @@
+/* Общие стили для контейнера категорий */
+.article-category {
+  margin-bottom: 2rem;
+}
+
+.article-category h3 {
+  margin: 0 0 0.5rem; /* Отступ снизу такой же, как между элементами в карточке */
+  font-size: 1.25rem;  /* Размер шрифта заголовка категории */
+  font-weight: bold;   /* Жирное начертание */
+  line-height: 1.4;    /* Высота строки для лучшего читаемости */
+  color: #333;         /* Цвет заголовка для контраста */
+  border-bottom: 1px solid #e1e1e1; /* Нижняя граница */
+  padding-bottom: 0.1rem; /* Отступ снизу от границы */
+}
+
+/* Стили для карточек статей */
+.articles {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #e1e1e1; /* Граница карточки */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень карточки */
+  width: 100%; /* Полная ширина контейнера */
+}
