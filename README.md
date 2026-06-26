@@ -1,2 +1,2 @@
-# Описание
-https://kirillbogatov.github.io/
+Персональный сайт-визитка для GitHub Pages
+
