@@ -1,11 +1,13 @@
 (() => {
   const DEFAULT_NOTE = "kirill-bogatov";
+  const DEFAULT_OPEN_NOTE = "portfolio";
   const stackEl = document.getElementById("stack");
   const cache = new Map();
   let stack = [];
 
   function parseStack(search) {
     const params = new URLSearchParams(search);
+    if (!params.has("note")) return [DEFAULT_NOTE, DEFAULT_OPEN_NOTE];
     const first = params.get("note") || DEFAULT_NOTE;
     const rest = params.getAll("stackedNotes");
     return [first, ...rest].filter((slug, i, all) => slug && all.indexOf(slug) === i);
