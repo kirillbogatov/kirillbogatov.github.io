@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Макеты: Кирилл Богатов</title>
+<style>
+  :root { --bg:#f8f9fa; --pane:#fff; --text:#202124; --muted:#5f6368; --line:#dadce0; --accent:#1a73e8; --accent-bg:#e8f0fe; --link-line:#aecbfa; --shadow:rgba(60,64,67,.15); --serif:Georgia,"Iowan Old Style","Palatino Linotype",serif; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:32px 20px 64px; background:#e9eaec; font:16px/1.5 system-ui,sans-serif; color:#202124; }
+  h1.t { font:600 22px system-ui; margin:0 0 4px; text-align:center; }
+  p.sub { text-align:center; color:#5f6368; margin:0 0 32px; }
+  h2.v { font:600 15px system-ui; margin:40px 0 14px; text-align:center; letter-spacing:.02em; }
+  .row { display:flex; flex-wrap:wrap; gap:32px; justify-content:center; align-items:flex-start; }
+  .cap { text-align:center; font-size:13px; color:#5f6368; margin-top:10px; max-width:640px; }
+  figure { margin:0; }
+
+  /* site-like page */
+  .page { background:var(--bg); color:var(--text); font-family:var(--serif); font-size:18px; line-height:1.6; padding:28px 16px; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,.18); }
+  .page.dark { --bg:#1a1917; --pane:#23211f; --text:#e8e4dc; --muted:#9a958a; --line:#38352f; --accent:#e0a37f; --accent-bg:#3a2c22; --pill-text:#e0a37f; --link-line:#4f7ea8; }
+  .desk { width:760px; }
+  .mob { width:375px; padding:0; overflow:hidden; }
+  .pane { background:var(--pane); max-width:625px; margin:0 auto; padding:40px; box-shadow:0 1px 6px var(--shadow); }
+  .mob .pane { padding:20px 16px 28px; box-shadow:none; max-width:none; }
+  h1 { font-size:2rem; line-height:1.2; margin:0 0 1rem; font-weight:600; }
+  .mob h1 { font-size:1.7rem; }
+  .lead { font-size:1.2rem; color:var(--muted); margin:0 0 1rem; }
+  p { margin:0 0 1rem; }
+  a { color:inherit; text-decoration:underline; text-decoration-color:var(--link-line); text-underline-offset:3px; }
+
+  /* A: hero right */
+  .hero { display:grid; grid-template-columns:1fr 230px; gap:32px; align-items:start; }
+  .hero img { width:100%; display:block; mix-blend-mode:multiply; }
+  .dark .hero .ph { background:#f4f2ee; border-radius:12px; padding:6px; }
+  .dark .hero img { mix-blend-mode:multiply; }
+  .pills { display:flex; flex-wrap:wrap; gap:10px; margin-top:8px; padding-top:20px; border-top:1px solid var(--line); }
+  .pills a { text-decoration:none; background:var(--accent-bg); color:var(--pill-text,#1558b0); padding:7px 16px; border-radius:999px; font:600 15px system-ui; }
+  .mob .hero { grid-template-columns:1fr; gap:8px; }
+  .mob .hero .ph { order:-1; text-align:center; }
+  .mob .hero img { max-height:300px; width:auto; margin:0 auto; }
+
+  /* B: avatar header */
+  .head { display:flex; gap:18px; align-items:center; margin-bottom:1rem; }
+  .head img { width:76px; height:76px; border-radius:50%; flex:none; }
+  .head h1 { margin:0; }
+  .head .lead { margin:2px 0 0; font-size:1.05rem; }
+  .sig { display:flex; justify-content:center; margin:8px 0 16px; }
+  .sig img { width:210px; mix-blend-mode:multiply; }
+  ul.plain { padding-left:1.2rem; margin:0; }
+  ul.plain li { margin-bottom:.4rem; }
+
+  /* current (broken) */
+  .broken { width:200px; height:120px; border:2px dashed #c5221f; color:#c5221f; display:flex; align-items:center; justify-content:center; font:13px system-ui; margin:1.2rem 0; text-align:center; padding:8px; }
+</style>
+</head>
+<body>
+<h1 class="t">Страница «Кирилл Богатов»: макеты</h1>
+<p class="sub">Использованы реальные цвета и шрифты сайта и ваши фото из assets/</p>
+
+<h2 class="v">Сейчас</h2>
+<div class="row"><figure>
+  <div class="page desk"><div class="pane">
+    <h1>Кирилл Богатов</h1>
+    <p class="lead">Дизайнер разговорных продуктов, AI-assistant инженер</p>
+    <p>Специализируюсь на цифровых ассистентах и AI-продуктах. Работаю как инженер полного цикла: собираю требования, проектирую решения и реализую их.</p>
+    <div class="broken">kirill-illustration-transparent.png<br>(файла нет в assets/)</div>
+    <ul class="plain"><li><a href="#">Портфолио</a></li><li><a href="#">Статьи</a></li><li><a href="#">Контакты</a></li></ul>
+  </div></div>
+  <figcaption class="cap">Картинка не грузится и стоит посреди контента; ссылки уезжают вниз.</figcaption>
+</figure></div>
+
+<h2 class="v">Вариант A (рекомендую): иллюстрация справа</h2>
+<div class="row">
+  <figure>
+    <div class="page desk"><div class="pane">
+      <div class="hero">
+        <div>
+          <h1>Кирилл Богатов</h1>
+          <p class="lead">Дизайнер разговорных продуктов, AI-assistant инженер</p>
+          <p>Специализируюсь на цифровых ассистентах и AI-продуктах. Работаю как инженер полного цикла: собираю требования, проектирую решения и реализую их.</p>
+        </div>
+        <div class="ph"><img src="../assets/kirill-illustration.png" alt=""></div>
+      </div>
+      <div class="pills"><a href="#">Портфолио</a><a href="#">Статьи</a><a href="#">Контакты</a></div>
+    </div></div>
+    <figcaption class="cap">Десктоп, светлая тема</figcaption>
+  </figure>
+  <figure>
+    <div class="page mob"><div class="pane">
+      <div class="hero">
+        <div>
+          <h1>Кирилл Богатов</h1>
+          <p class="lead">Дизайнер разговорных продуктов, AI-assistant инженер</p>
+          <p>Специализируюсь на цифровых ассистентах и AI-продуктах. Работаю как инженер полного цикла.</p>
+        </div>
+        <div class="ph"><img src="../assets/kirill-illustration.png" alt=""></div>
+      </div>
+      <div class="pills"><a href="#">Портфолио</a><a href="#">Статьи</a><a href="#">Контакты</a></div>
+    </div></div>
+    <figcaption class="cap">Мобильный: портрет первым, ограничен по высоте</figcaption>
+  </figure>
+</div>
+<div class="row" style="margin-top:32px"><figure>
+  <div class="page desk dark"><div class="pane">
+    <div class="hero">
+      <div>
+        <h1>Кирилл Богатов</h1>
+        <p class="lead">Дизайнер разговорных продуктов, AI-assistant инженер</p>
+        <p>Специализируюсь на цифровых ассистентах и AI-продуктах. Работаю как инженер полного цикла: собираю требования, проектирую решения и реализую их.</p>
+      </div>
+      <div class="ph"><img src="../assets/kirill-illustration.png" alt=""></div>
+    </div>
+    <div class="pills"><a href="#">Портфолио</a><a href="#">Статьи</a><a href="#">Контакты</a></div>
+  </div></div>
+  <figcaption class="cap">Тёмная тема: белый фон картинки оформлен светлой подложкой со скруглением</figcaption>
+</figure></div>
+
+<h2 class="v">Вариант B: круглый аватар в шапке, иллюстрация внизу</h2>
+<div class="row"><figure>
+  <div class="page desk"><div class="pane">
+    <div class="head">
+      <img src="../assets/kirill-bogatov.png" alt="">
+      <div><h1>Кирилл Богатов</h1><p class="lead">Дизайнер разговорных продуктов, AI-assistant инженер</p></div>
+    </div>
+    <p>Специализируюсь на цифровых ассистентах и AI-продуктах. Работаю как инженер полного цикла: собираю требования, проектирую решения и реализую их.</p>
+    <ul class="plain"><li><a href="#">Портфолио</a></li><li><a href="#">Статьи</a></li><li><a href="#">Контакты</a></li></ul>
+    <div class="sig"><img src="../assets/kirill-illustration.png" alt=""></div>
+  </div></div>
+  <figcaption class="cap">Компактно и строго, но фирменная иллюстрация уходит на второй план</figcaption>
+</figure></div>
+</body>
+</html>
