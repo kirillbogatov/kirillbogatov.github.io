@@ -5,13 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Кирилл Богатов, дизайнер разговорных продуктов. Навыки Алисы, цифровые ассистенты, методология и пользовательский опыт.">
 <title>Кирилл Богатов, дизайнер разговорных продуктов</title>
+<script>
+try {
+  const savedTheme = localStorage.getItem("kirill-portfolio-theme");
+  document.documentElement.dataset.theme = savedTheme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+} catch {
+  document.documentElement.dataset.theme = "light";
+}
+</script>
 <link rel="icon" href="/favicon.ico">
-<link rel="stylesheet" href="/styles.css?v=notes-10">
+<link rel="stylesheet" href="/styles.css?v=notes-33">
 </head>
 <body class="stack-page">
+<nav class="site-nav" aria-label="Основная навигация">
+  <a class="brand" href="/">Кирилл Богатов</a>
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Переключить тему" title="Переключить тему">☾</button>
+</nav>
 <div id="stack" aria-live="polite">
 <noscript><p class="noscript">Для стека заметок нужен JavaScript. <a href="/notes/kirill-bogatov.html">Открыть заметки без него</a>.</p></noscript>
 </div>
-<script src="/script.js?v=notes-7"></script>
+<script src="/script.js?v=notes-18"></script>
 </body>
 </html>

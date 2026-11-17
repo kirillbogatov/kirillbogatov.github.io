@@ -4,6 +4,29 @@
   const stackEl = document.getElementById("stack");
   const cache = new Map();
   let stack = [];
+  let focusStart = null;
+  const themeToggle = document.getElementById("theme-toggle");
+
+  function setTheme(theme, save = true) {
+    document.documentElement.dataset.theme = theme;
+    if (themeToggle) {
+      const dark = theme === "dark";
+      themeToggle.textContent = dark ? "\u2600" : "\u263E";
+      themeToggle.setAttribute("aria-label", dark ? "\u0421\u0432\u0435\u0442\u043b\u0430\u044f \u0442\u0435\u043c\u0430" : "\u0422\u0451\u043c\u043d\u0430\u044f \u0442\u0435\u043c\u0430");
+      themeToggle.setAttribute("aria-pressed", String(dark));
+      themeToggle.title = dark ? "\u0421\u0432\u0435\u0442\u043b\u0430\u044f \u0442\u0435\u043c\u0430" : "\u0422\u0451\u043c\u043d\u0430\u044f \u0442\u0435\u043c\u0430";
+    }
+    if (save) {
+      try { localStorage.setItem("kirill-portfolio-theme", theme); } catch {}
+    }
+  }
+
+  if (themeToggle) {
+    setTheme(document.documentElement.dataset.theme || "light", false);
+    themeToggle.addEventListener("click", () => {
+      setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+    });
+  }
 
   function parseStack(search) {
     const params = new URLSearchParams(search);
@@ -48,6 +71,16 @@
     const pane = el("section", "pane");
     pane.dataset.index = index;
 
+    const paneTitle = index === 0 && slug === "kirill-bogatov"
+      ? "\u041e\u0431\u043e \u043c\u043d\u0435"
+      : (note ? note.title : slug);
+    const tab = el("button", "pane-tab", paneTitle);
+    tab.type = "button";
+    tab.setAttribute("aria-label", paneTitle);
+    tab.title = paneTitle;
+    tab.dataset.paneTab = "true";
+    pane.appendChild(tab);
+
     const title = note ? note.title : "Заметка не найдена";
 
     const body = el("div", "pane-body");
@@ -77,9 +110,45 @@
     return pane;
   }
 
+  function updateActiveLinks() {
+    [...stackEl.querySelectorAll(".pane:not(.leaving)")].forEach((pane) => {
+      const nextSlug = stack[Number(pane.dataset.index) + 1];
+      pane.querySelectorAll("a[data-note]").forEach((link) => {
+        const active = Boolean(nextSlug && link.dataset.note === nextSlug);
+        link.classList.toggle("active-note-link", active);
+        link.closest(".portfolio-item")?.classList.toggle("active-project", active);
+        if (active) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      });
+    });
+  }
+
+  function updateCollapsedPanes(skipAnimation = new Set()) {
+    const expandedStart = focusStart === null ? Math.max(0, stack.length - 2) : focusStart;
+    [...stackEl.querySelectorAll(".pane:not(.leaving)")].forEach((pane) => {
+      const index = Number(pane.dataset.index);
+      const collapsed = !mobile.matches && stack.length > 2 && index < expandedStart;
+      const wasCollapsed = pane.classList.contains("collapsed");
+      const from = pane.offsetWidth;
+      pane.classList.toggle("collapsed", collapsed);
+      pane.querySelector(".pane-tab").setAttribute("aria-expanded", String(!collapsed));
+      if (wasCollapsed !== collapsed && !skipAnimation.has(pane) && !reducedMotion.matches && !firstRender) {
+        const to = collapsed ? 40 : pane.offsetWidth;
+        pane.classList.add("is-resizing");
+        const animation = pane.animate(
+          [{ flexBasis: from + "px", width: from + "px" }, { flexBasis: to + "px", width: to + "px" }],
+          { duration: 500, easing: EASE }
+        );
+        animation.onfinish = () => pane.classList.remove("is-resizing");
+        animation.oncancel = () => pane.classList.remove("is-resizing");
+      }
+    });
+  }
+
   const EASE = "cubic-bezier(0.22, 0.7, 0.2, 1)";
   const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
   const mobile = matchMedia("(max-width: 700px)");
+  mobile.addEventListener("change", () => updateCollapsedPanes());
   let renderId = 0;
   let firstRender = true;
 
@@ -112,7 +181,7 @@
     if (id !== renderId) return;
 
     const animate = !firstRender && !reducedMotion.matches;
-    const duration = animate ? 280 : 0;
+    const duration = animate ? 500 : 0;
     if (firstRender) stackEl.replaceChildren();
     firstRender = false;
 
@@ -144,6 +213,9 @@
       stackEl.appendChild(pane);
       fresh.push(pane);
     }
+    updateActiveLinks();
+    updateCollapsedPanes(new Set(fresh));
+
     fresh.forEach((pane) => {
       if (!animate) return;
       if (mobile.matches) pane.animate([{ opacity: 0, transform: "translateX(24px)" }, { opacity: 1, transform: "none" }], { duration, easing: EASE });
@@ -175,6 +247,7 @@
 
   function navigate(next, push = true) {
     stack = next;
+    focusStart = null;
     if (push) history.pushState(null, "", buildUrl(stack));
     render();
   }
@@ -234,6 +307,14 @@
     if (!pane) return;
     const index = Number(pane.dataset.index);
 
+    if (event.target.closest("[data-pane-tab]")) {
+      event.preventDefault();
+      focusStart = index;
+      updateCollapsedPanes();
+      followPane(Math.min(index + 1, stack.length - 1), 500, renderId);
+      return;
+    }
+
     const shot = event.target.closest(".carousel-track img");
     if (shot) {
       openLightbox([...shot.parentElement.querySelectorAll("img")], shot);
@@ -275,6 +356,7 @@
 
   window.addEventListener("popstate", () => {
     stack = parseStack(location.search);
+    focusStart = null;
     render();
   });
 
