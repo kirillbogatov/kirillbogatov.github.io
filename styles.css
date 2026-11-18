@@ -198,8 +198,8 @@ body.lightbox-open { overflow: hidden; }
   border-top: 2px solid currentColor;
   border-right: 2px solid currentColor;
 }
-.carousel-btn.prev::before { transform: translateX(2px) rotate(-135deg); }
-.carousel-btn.next::before { transform: translateX(-2px) rotate(45deg); }
+.carousel-btn.prev::before { transform: rotate(-135deg); }
+.carousel-btn.next::before { transform: rotate(45deg); }
 
 .note .medal { cursor: help; text-decoration: none; }
 
