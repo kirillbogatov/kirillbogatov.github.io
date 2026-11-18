@@ -181,7 +181,7 @@ body.lightbox-open { overflow: hidden; }
   border-radius: 50%;
   background: var(--pane);
   color: var(--text);
-  font: 1.6rem/1 var(--serif);
+  font-size: 0;
   box-shadow: 0 1px 6px var(--shadow);
   cursor: pointer;
   opacity: 0.85;
@@ -191,6 +191,15 @@ body.lightbox-open { overflow: hidden; }
 .carousel-btn[hidden] { display: none; }
 .carousel-btn.prev { left: 0.6rem; }
 .carousel-btn.next { right: 0.6rem; }
+.carousel-btn::before {
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+}
+.carousel-btn.prev::before { transform: translateX(2px) rotate(-135deg); }
+.carousel-btn.next::before { transform: translateX(-2px) rotate(45deg); }
 
 .note .medal { cursor: help; text-decoration: none; }
 
