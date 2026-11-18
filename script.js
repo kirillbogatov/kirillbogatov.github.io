@@ -106,7 +106,12 @@
       }
     });
 
-    body.querySelectorAll(".carousel-btn").forEach((btn) => { btn.hidden = false; });
+    body.querySelectorAll(".carousel-btn").forEach((btn) => {
+      const previous = btn.classList.contains("prev");
+      const path = previous ? "m15 18-6-6 6-6" : "m9 18 6-6-6-6";
+      btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${path}"/></svg>`;
+      btn.hidden = false;
+    });
 
     pane.appendChild(body);
     return pane;
@@ -263,6 +268,10 @@
     const prev = el("button", "lightbox-btn prev", "‹");
     const next = el("button", "lightbox-btn next", "›");
     const close = el("button", "lightbox-btn close", "×");
+    const arrowIcon = (path) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${path}"/></svg>`;
+    prev.innerHTML = arrowIcon("m15 18-6-6 6-6");
+    next.innerHTML = arrowIcon("m9 18 6-6-6-6");
+    close.innerHTML = arrowIcon("M18 6 6 18M6 6l12 12");
     prev.type = next.type = close.type = "button";
     prev.setAttribute("aria-label", "Предыдущий скриншот");
     next.setAttribute("aria-label", "Следующий скриншот");
@@ -289,8 +298,8 @@
     };
 
     box.addEventListener("click", (e) => {
-      if (e.target === prev) show(i - 1);
-      else if (e.target === next) show(i + 1);
+      if (e.target.closest(".lightbox-btn.prev")) show(i - 1);
+      else if (e.target.closest(".lightbox-btn.next")) show(i + 1);
       else shut();
     });
     document.addEventListener("keydown", onKey, true);
