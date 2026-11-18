@@ -11,7 +11,9 @@
     document.documentElement.dataset.theme = theme;
     if (themeToggle) {
       const dark = theme === "dark";
-      themeToggle.textContent = dark ? "\u2600" : "\u263E";
+      themeToggle.innerHTML = dark
+        ? '<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>'
+        : '<svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.0 15.6A8.5 8.5 0 0 1 8.4 4a8.5 8.5 0 1 0 11.6 11.6Z"/></svg>';
       themeToggle.setAttribute("aria-label", dark ? "\u0421\u0432\u0435\u0442\u043b\u0430\u044f \u0442\u0435\u043c\u0430" : "\u0422\u0451\u043c\u043d\u0430\u044f \u0442\u0435\u043c\u0430");
       themeToggle.setAttribute("aria-pressed", String(dark));
       themeToggle.title = dark ? "\u0421\u0432\u0435\u0442\u043b\u0430\u044f \u0442\u0435\u043c\u0430" : "\u0422\u0451\u043c\u043d\u0430\u044f \u0442\u0435\u043c\u0430";
