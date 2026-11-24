@@ -66,6 +66,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 .note p { margin: 0 0 1rem; }
 .note .lead { font-size: 1.2rem; color: var(--muted); }
+.note .video-embed { position: relative; width: 100%; aspect-ratio: 16 / 9; margin: 0 0 1.2rem; }
+.note .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 6px; }
 .note ul { padding-left: 1.2rem; margin: 0 0 1rem; }
 .note li { margin-bottom: 0.4rem; }
 .note img { border-radius: 6px; margin: 0 0 1.2rem; }
