@@ -18,16 +18,16 @@
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #121215;
-  --pane: #1b1b20;
-  --text: #dcdce2;
-  --muted: #9a9aa8;
-  --line: #2d2d35;
-  --accent: #7db8f0;
-  --link-line: #3f6a96;
-  --link-line-hover: #7db8f0;
-  --accent-bg: #1f2d3f;
-  --heading: #f3f3f6;
+  --bg: #0b0f17;
+  --pane: #111a28;
+  --text: #f1f4fa;
+  --muted: #a1aab7;
+  --line: #273244;
+  --accent: #4b82f6;
+  --link-line: #35558c;
+  --link-line-hover: #6e9bff;
+  --accent-bg: #1b2d4b;
+  --heading: #ffffff;
   --shadow: rgba(0, 0, 0, 0.5);
 }
 
